@@ -17,6 +17,7 @@ program
   .option('-o --out [outPath]', 'output path', function (out) {config.out = out})
   .option('-m --minimize', 'compressed file', function (minimize) {config.minimize = minimize !== false})
   .option('-c --config [filePath]', 'variables file', function (c) {config.config = c})
+  .option('-p --path [includePaths]', 'node-sass includePaths', function (path) { config.path = path })
   .option('-b --browsers <items>', 'set browsers', function (browsers) {config.browsers = browsers.split(',')})
   .parse(process.argv)
 
